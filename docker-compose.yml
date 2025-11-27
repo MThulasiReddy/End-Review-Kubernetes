@@ -22,7 +22,7 @@ services:
       dockerfile: ../SDP-CICD-B/backend.Dockerfile
     image: sdp-cicd-backend
     ports:
-      - "8887:7888" # backend port changed to 7888(HOST)
+      - "8887:2000" # backend port changed to 7888(HOST)
     depends_on:
       - mysqldb
     restart: on-failure
