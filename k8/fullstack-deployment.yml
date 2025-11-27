@@ -40,7 +40,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql-db
+  name: mysql-service
   namespace: fullstack-app
 spec:
   selector:
@@ -71,7 +71,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: mthulasireddy/k8-backend:latest  # <-- change this
+          image: mthulasireddy/sdp-backend:latest  # <-- change this
           ports:
             - containerPort: 2000
 ---
@@ -110,7 +110,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: mthulasireddy/k8-frontend:latest  # <-- change this
+          image: mthulasireddy/sdp-frontend:latest  # <-- change this
           ports:
             - containerPort: 80
 ---
